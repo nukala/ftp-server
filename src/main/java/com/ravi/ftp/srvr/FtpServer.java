@@ -47,7 +47,7 @@ public interface FtpServer {
      * <br/>
      * Given the nature of a simple-app, this is easier. In a commercial app, these will be error codes and Errors class and such.
      */
-    public class FtpServerException extends RuntimeException {
+    class FtpServerException extends RuntimeException {
         public FtpServerException(String message) {
             super(message);
         }
@@ -61,13 +61,13 @@ public interface FtpServer {
         }
     }
 
-    public class InvalidFolderException extends FtpServerException {
+    class InvalidFolderException extends FtpServerException {
         public InvalidFolderException(String message) {
             super(message);
         }
     }
 
-    public class InvalidPortException extends FtpServerException {
+    class InvalidPortException extends FtpServerException {
         public InvalidPortException(String message) {
             super(message);
         }

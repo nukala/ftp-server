@@ -26,7 +26,7 @@ import com.ravi.ftp.srvr.FtpServerImpl;
 //        - Full test coverage.
 public class FtpServerApp {
     public static final int PORT = 6103;
-    private FtpServer server;
+    private final FtpServer server;
 
     public FtpServerApp() {
         this.server = new FtpServerImpl();
@@ -35,7 +35,7 @@ public class FtpServerApp {
     /**
      * Takes one command-line-argument, the folder to serve.
      *
-     * @param args
+     * @param args  command line arguments.
      */
     public static void main(String[] args) {
         FtpServerApp app = new FtpServerApp();
